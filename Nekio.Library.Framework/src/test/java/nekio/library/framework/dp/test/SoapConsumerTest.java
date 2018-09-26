@@ -22,10 +22,11 @@ public class SoapConsumerTest {
             "0"
         );
 
-        request.setWsURL("http://15.192.40.64:8080/t2iInteropBnte/services/polizaService");
-        request.setWebserviceKey("web");
-        request.setXmlns("http://webservice.sabe_wd.t2iInteropBnte.t2i.mx/");
-        request.setWebmethod("searchForNumPoliza");
+        // sample values in previous versions
+        request.setWsURL("");
+        request.setWebserviceKey("");
+        request.setXmlns("");
+        request.setWebmethod("");
         request.setResponseHasManyRootNodes(true);
 
         try {

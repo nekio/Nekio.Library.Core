@@ -18,16 +18,15 @@ import nekio.library.framework.webservice.model.Requestable;
 
 // </editor-fold>
 
+// sample values in previous versions
 public class DummySoapRequestable extends Requestable{
     // <editor-fold defaultstate="collapsed" desc="Attributes">
     private String version;
-    private String numeroPoliza;
     // </editor-fold>
 
     // <editor-fold defaultstate="collapsed" desc="Constructors">
-    public DummySoapRequestable(String numeroPoliza){
-        this.version = "v1";
-        this.numeroPoliza = numeroPoliza;
+    public DummySoapRequestable(String version){
+        this.version = version;
     }
     // </editor-fold>
 
@@ -42,21 +41,12 @@ public class DummySoapRequestable extends Requestable{
     public void setVersion(String version) {
         this.version = version;
     }
-
-    public String getNumeroPoliza() {
-        return numeroPoliza;
-    }
-
-    public void setNumeroPoliza(String numeroPoliza) {
-        this.numeroPoliza = numeroPoliza;
-    }
     
     @Override
     public Map<String, String> getRequestParameters() {
         Map<String, String> result = new LinkedHashMap<>();
 
-        result.put("version	", this.version);
-        result.put("npoliza", this.numeroPoliza);
+        result.put("version", this.version);
 
         return result;
     }
@@ -65,28 +55,13 @@ public class DummySoapRequestable extends Requestable{
     public List<String> getExpectedResponseNodes(){
         List<String> result = new ArrayList<>();
 
-        result.add("remove");
-        result.add("workgroup");
-        result.add("responseStatus");
-        result.add("contrat");
-        result.add("finivig");
-        result.add("ftervig");
-        result.add("idcliente");
-        result.add("nagente");
-        result.add("nomagte");
-        result.add("npoliza");
-        result.add("npolorg");
-        result.add("ramsubramo");
-        result.add("rfc");
-        result.add("stpoliza");
-        result.add("tpramo");
-        result.add("tpramoi");
+        result.add("");
 
         return result;
     }
     
     @Override
     public String toString() {
-            return "SabeRamoRequestDTO [version=" + version + ", numeroPoliza=" + numeroPoliza + "]";
+            return "SabeRamoRequestDTO [version=" + version + "]";
     }
 }
