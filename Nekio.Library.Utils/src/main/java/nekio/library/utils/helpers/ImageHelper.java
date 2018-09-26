@@ -1,5 +1,14 @@
 package nekio.library.utils.helpers;
 
+/**
+ * @owner MSIS. Sinesio Ivan Carrillo Heredia
+ * @author Nekio <nekio@outlook.com>
+ * @version 2018/06/09
+ *
+ * Helper for Images
+ */
+
+// <editor-fold defaultstate="collapsed" desc="Libraries">
 import com.sun.org.apache.xerces.internal.impl.dv.util.Base64;
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -12,17 +21,6 @@ import nekio.library.common.Tools;
 import nekio.library.log.Logger;
 import nekio.library.log.utils.contracts.ILoggeable;
 import nekio.library.utils.P;
-
-/**
- * @owner MSIS. Sinesio Ivan Carrillo Heredia
- * @author Nekio <nekio@outlook.com>
- * @version 2018/06/09
- *
- * Helper for Images
- */
-
-// <editor-fold defaultstate="collapsed" desc="Libraries">
-
 // </editor-fold>
 
 public class ImageHelper implements ILoggeable{

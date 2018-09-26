@@ -18,6 +18,7 @@ import nekio.library.common.Global;
 import nekio.library.common.enums.Logging.Severity;
 import nekio.library.common.model.component.ComponentTracker;
 import nekio.library.common.model.Log;
+import nekio.library.log.ide.ConsoleColors;
 import nekio.library.log.utils.LogUtils;
 // </editor-fold>
 
@@ -197,10 +198,23 @@ public class Logger {
     
     private static void print(Severity severity, String text){
         if(Global.DEBUG_IN_IDE){
-            if(severity == Severity.Error){
-                System.err.println(text);
-            }else{
-                System.out.println(text);
+            
+            switch(severity){
+                case Debug:
+                    System.out.println(ConsoleColors.GRAY + text);
+                    break;
+                case Info:
+                    System.out.println(text);
+                    break;
+                case Warn:
+                    System.out.println(ConsoleColors.YELLOW + text);
+                    break;
+                case Error:
+                    System.out.println(ConsoleColors.PURPLE + text);
+                    break;
+                case Exception:
+                    System.out.println(ConsoleColors.RED + text);
+                    break;
             }
         }
 

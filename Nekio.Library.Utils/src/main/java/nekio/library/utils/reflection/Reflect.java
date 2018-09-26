@@ -5,7 +5,7 @@ package nekio.library.utils.reflection;
  * @author Nekio <nekio@outlook.com>
  * @version 2018/06/10
  *
- * {Class Description}
+ * Util for Reflection
  */
 
 // <editor-fold defaultstate="collapsed" desc="Libraries">

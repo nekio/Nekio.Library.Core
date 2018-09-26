@@ -20,6 +20,17 @@ import java.util.Date;
 
 public class Converter {
     // <editor-fold defaultstate="collapsed" desc="Static Behaviours">
+    public static <T>T safeCast(Object o, Class<T> clazz) {
+        T t = null;
+        if(clazz != null){
+            if(clazz.isInstance(o)){
+                t =  clazz.cast(o);
+            }
+        }
+
+        return t;
+    }
+    
     public static byte[] toByteArray(InputStream input) throws IOException{
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         int reads = input.read();

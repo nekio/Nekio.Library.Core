@@ -10,12 +10,20 @@ package nekio.library.utils.test;
  */
 
 // <editor-fold defaultstate="collapsed" desc="Libraries">
-
+import nekio.library.utils.converters.Converter;
 // </editor-fold>
 
 public class UtilsTest {
     // <editor-fold defaultstate="collapsed" desc="Testing Methods">
     public static void main(String[] args) {
+        safeCasting();
     }
-    // </editor-fold>
+    
+    private static void safeCasting(){
+        int x = 7;
+        Object object = x;
+        
+        Integer i = Converter.safeCast(object, Integer.class);
+        System.out.println(i);
+    }
 }
